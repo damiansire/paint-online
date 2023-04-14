@@ -92,17 +92,30 @@
         }
     </style>
     <script>
-        let selectedColor;
+        let principalColor = 'rgb(255,255,255)';
+        let backgroundColor = 'rgb(0,64,128)';
         document.getElementsByClassName("color-selector")[0].addEventListener("click", (event) => {
             if (event.srcElement?.getAttribute("data-color")) {
-                const selectedColor = event.srcElement.getAttribute("data-color");
-                updatePrincipalColor(selectedColor)
+                const principalColor = event.srcElement.getAttribute("data-color");
+                updatePrincipalColor(principalColor)
+            }
+        })
+
+        document.getElementsByClassName("color-selector")[0].addEventListener("contextmenu", (event) => {
+            if (event.srcElement?.getAttribute("data-color")) {
+                const backgroundColor = event.srcElement.getAttribute("data-color");
+                updateBackgroundColor(backgroundColor)
             }
         })
 
         function updatePrincipalColor(newColor) {
-            selectedColor = newColor;
+            principalColor = newColor;
             document.getElementById("principal-color").style.backgroundColor = newColor;
+        }
+
+        function updateBackgroundColor(newColor) {
+            backgroundColor = newColor;
+            document.getElementById("background-color").style.backgroundColor = newColor;
         }
     </script>
 </body>
