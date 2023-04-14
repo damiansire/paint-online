@@ -15,34 +15,34 @@
             <div id="principal-color" class="color-option" style="background-color:rgb(0,64,128)"></div>
         </div>
         <div class="color-selector">
-            <div class="color-option" style="background-color:rgb(0,0,0)"></div>
-            <div class="color-option" style="background-color:rgb(128,128,128)"></div>
-            <div class="color-option" style="background-color:rgb(128,0,0)"></div>
-            <div class="color-option" style="background-color:rgb(128,128,0)"></div>
-            <div class="color-option" style="background-color:rgb(0,128,0)"></div>
-            <div class="color-option" style="background-color:rgb(0,128,128)"></div>
-            <div class="color-option" style="background-color:rgb(0,0,128)"></div>
-            <div class="color-option" style="background-color:rgb(128,0,128)"></div>
-            <div class="color-option" style="background-color:rgb(128,128,64)"></div>
-            <div class="color-option" style="background-color:rgb(0,64,64)"></div>
-            <div class="color-option" style="background-color:rgb(0,128,255)"></div>
-            <div class="color-option" style="background-color:rgb(0,64,128)"></div>
-            <div class="color-option" style="background-color:rgb(64,0,255)"></div>
-            <div class="color-option" style="background-color:rgb(128,64,0)"></div>
-            <div class="color-option" style="background-color:rgb(255,255,255)"></div>
-            <div class="color-option" style="background-color:rgb(192,192,192)"></div>
-            <div class="color-option" style="background-color:rgb(255,0,0)"></div>
-            <div class="color-option" style="background-color:rgb(255,255,0)"></div>
-            <div class="color-option" style="background-color:rgb(0,255,0)"></div>
-            <div class="color-option" style="background-color:rgb(0,255,255)"></div>
-            <div class="color-option" style="background-color:rgb(0,0,255)"></div>
-            <div class="color-option" style="background-color:rgb(255,0,255)"></div>
-            <div class="color-option" style="background-color:rgb(255,255,128)"></div>
-            <div class="color-option" style="background-color:rgb(0,255,128)"></div>
-            <div class="color-option" style="background-color:rgb(128,255,255)"></div>
-            <div class="color-option" style="background-color:rgb(128,128,255)"></div>
-            <div class="color-option" style="background-color:rgb(255,0,128)"></div>
-            <div class="color-option" style="background-color:rgb(255,128,64)"></div>
+            <div class="color-option" style="background-color:rgb(0,0,0)" data-color="rgb(0,0,0)"></div>
+            <div class="color-option" style="background-color:rgb(128,128,128)" data-color="rgb(128,128,128)"></div>
+            <div class="color-option" style="background-color:rgb(128,0,0)" data-color="rgb(128,0,0)"></div>
+            <div class="color-option" style="background-color:rgb(128,128,0)" data-color="rgb(128,128,0)"></div>
+            <div class="color-option" style="background-color:rgb(0,128,0)" data-color="rgb(0,128,0)"></div>
+            <div class="color-option" style="background-color:rgb(0,128,128)" data-color="rgb(0,128,128)"></div>
+            <div class="color-option" style="background-color:rgb(0,0,128)" data-color="rgb(0,0,128)"></div>
+            <div class="color-option" style="background-color:rgb(128,0,128)" data-color="rgb(128,0,128)"></div>
+            <div class="color-option" style="background-color:rgb(128,128,64)" data-color="rgb(128,128,64)"></div>
+            <div class="color-option" style="background-color:rgb(0,64,64)" data-color="rgb(0,64,64)"></div>
+            <div class="color-option" style="background-color:rgb(0,128,255)" data-color="rgb(0,128,255)"></div>
+            <div class="color-option" style="background-color:rgb(0,64,128)" data-color="rgb(0,64,128)"></div>
+            <div class="color-option" style="background-color:rgb(64,0,255)" data-color="rgb(64,0,255)"></div>
+            <div class="color-option" style="background-color:rgb(128,64,0)" data-color="rgb(128,64,0)"></div>
+            <div class="color-option" style="background-color:rgb(255,255,255)" data-color="rgb(255,255,255)"></div>
+            <div class="color-option" style="background-color:rgb(192,192,192)" data-color="rgb(192,192,192)"></div>
+            <div class="color-option" style="background-color:rgb(255,0,0)" data-color="rgb(255,0,0)"></div>
+            <div class="color-option" style="background-color:rgb(255,255,0)" data-color="rgb(255,255,0)"></div>
+            <div class="color-option" style="background-color:rgb(0,255,0)" data-color="rgb(0,255,0)"></div>
+            <div class="color-option" style="background-color:rgb(0,255,255)" data-color="rgb(0,255,255)"></div>
+            <div class="color-option" style="background-color:rgb(0,0,255)" data-color="rgb(0,0,255)"></div>
+            <div class="color-option" style="background-color:rgb(255,0,255)" data-color="rgb(255,0,255)"></div>
+            <div class="color-option" style="background-color:rgb(255,255,128)" data-color="rgb(255,255,128)"></div>
+            <div class="color-option" style="background-color:rgb(0,255,128)" data-color="rgb(0,255,128)"></div>
+            <div class="color-option" style="background-color:rgb(128,255,255)" data-color="rgb(128,255,255)"></div>
+            <div class="color-option" style="background-color:rgb(128,128,255)" data-color="rgb(128,128,255)"></div>
+            <div class="color-option" style="background-color:rgb(255,0,128)" data-color="rgb(255,0,128)"></div>
+            <div class="color-option" style="background-color:rgb(255,128,64)" data-color="rgb(255,128,64)"></div>
         </div>
     </section>
     <style>
@@ -91,7 +91,20 @@
             margin-top: 12px;
         }
     </style>
-    <script src="./scripts.js"></script>
+    <script>
+        let selectedColor;
+        document.getElementsByClassName("color-selector")[0].addEventListener("click", (event) => {
+            if (event.srcElement?.getAttribute("data-color")) {
+                const selectedColor = event.srcElement.getAttribute("data-color");
+                updatePrincipalColor(selectedColor)
+            }
+        })
+
+        function updatePrincipalColor(newColor) {
+            selectedColor = newColor;
+            document.getElementById("principal-color").style.backgroundColor = newColor;
+        }
+    </script>
 </body>
 
 </html>
