@@ -103,6 +103,7 @@
 
         document.getElementsByClassName("color-selector")[0].addEventListener("contextmenu", (event) => {
             if (event.srcElement?.getAttribute("data-color")) {
+                event.preventDefault()
                 const backgroundColor = event.srcElement.getAttribute("data-color");
                 updateBackgroundColor(backgroundColor)
             }
